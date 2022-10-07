@@ -18,6 +18,7 @@ void swap(int *a, int *b)
 /**
  * part - Divides the array(or sub array) into two partitions
  * @array: Array to partition
+ * @size: size
  * @l: Lower end of the array
  * @h: Higher end of the array
  *
@@ -54,7 +55,8 @@ int part(int *array, size_t size, int l, int h)
  * quick_recur - Recursive function
  *
  * @array: Array to sort
- * @l: Lower end 
+ * @size: size
+ * @l: Lower end
  * @h: Higher end
  */
 void quick_recur(int *array, size_t size, int l, int h)
