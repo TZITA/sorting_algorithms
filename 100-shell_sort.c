@@ -8,12 +8,17 @@
  */
 void shell_sort(int *array, size_t size)
 {
+	/*size_t knuth = 1;*/
 	size_t interval;
+	/*size_t sm;*/
 	size_t i;
 	size_t j;
 	int tmp;
 
-	for (interval = size / 2; interval > 0; interval /= 2)
+	if (size < 2)
+		return;
+
+	for (interval = 4; interval > 0; interval = (interval - 1) / 3)
 	{
 		for (i = interval; i < size; i++)
 		{
