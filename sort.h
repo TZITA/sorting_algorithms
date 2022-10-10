@@ -36,10 +36,13 @@ void quick_recur(int *array, size_t size, int l, int h);
 
 /*Other helper functions*/
 void swap_c(listint_t **list, listint_t *node);
+void Merge(size_t str, size_t mid, size_t end, int *dest, int *src);
+void Split_M(size_t str, size_t end, int *array, int *cp);
 
 /*Advanced tasks prototypes.*/
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
 
 #endif /*End of the sort header.*/
