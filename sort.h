@@ -36,5 +36,6 @@ void quick_recur(int *array, size_t size, int l, int h);
 
 /*Advanced tasks prototypes.*/
 void shell_sort(int *array, size_t size);
+void counting_sort(int *array, size_t size);
 
 #endif /*End of the sort header.*/
