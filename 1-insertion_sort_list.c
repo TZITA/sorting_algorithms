@@ -1,27 +1,34 @@
 #include "sort.h"
 
 /**
- * insertin_sort - Insertion sorting algorithm
- * 
+ * insertin_sort_list - Insertion sorting algorithm
+ *
  * @list: List to be sorted.
  */
 void insertion_sort_list(listint_t **list)
 {
-	const int i;
-	const int j;
-	const int k;
-	const int len = sizeof(list) / sizeof(list[0])
+	listint_t *swap_n, *next_n;
 
-	for (i = 0; i < len; i++)
+	if (list == NULL || *list == NULL)
+		return;
+	swap_n = (*list)->next;
+	while (swap_n != NULL)
 	{
-		j = list[i]->n;
-		k = i - 1;
-
-		while (k >= 0 && list[k]->n > j)
+		next_n = swap_n->next;
+		while (swap_n->prev != NULL && swap_n->prev->n > swap_n->n)
 		{
-			list[k + 1] = list[k];
-			k = k - 1;
+			swap_n->prev->next = swap_n->next;
+			if (swap_n->next != NULL)
+				swap_n->next->prev = swap_n->prev;
+			swap_n->next = swap_n->prev;
+			swap_n->prev = swap_n->next->prev;
+			swap_n->next->prev = swap_n;
+			if (swap_n->prev == NULL)
+				*list = swap_n;
+			else
+				swap_n->prev->next = swap_n;
+			print_list(*list);
 		}
-		list[k + 1]->n = j;
+		swap_n = next_n;
 	}
 }
