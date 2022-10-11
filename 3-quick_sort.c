@@ -16,7 +16,7 @@ void swap(int *a, int *b)
 }
 
 /**
- * part - Divides the array(or sub array) into two partitions
+ * part_q - Divides the array(or sub array) into two partitions
  * @array: Array to partition
  * @size: size
  * @l: Lower end of the array
