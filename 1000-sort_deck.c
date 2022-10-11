@@ -66,7 +66,7 @@ int card_value(deck_node_t *node)
 
 	for (i = 1; i <= 4; i++)
 	{
-		if (str_cmp(kinds[node->card->kind], kinds[i - 1]))
+		if (!str_cmp(kinds[node->card->kind], kinds[i - 1]))
 			kindv = kindv + (13 * i);
 	}
 	return (kindv);
