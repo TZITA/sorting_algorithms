@@ -50,9 +50,9 @@ void quicksort(int *array, ssize_t l, ssize_t h, size_t size)
 
 	if (l < h)
 	{
-		pivot = partition(array, l, h, size);
-		quicksort(array, lo, pivot, size);
-		quicksort(array, pivot + 1, hi, size);
+		pivot = part(array, l, h, size);
+		quicksort(array, l, pivot, size);
+		quicksort(array, pivot + 1, h, size);
 	}
 }
 
