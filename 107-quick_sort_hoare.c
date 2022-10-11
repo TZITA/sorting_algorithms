@@ -19,7 +19,7 @@ size_t part(int *array, ssize_t l, ssize_t h, size_t size)
 		while (array[l] < pivot)
 			l++;
 		while (array[h] > pivot)
-			h++;
+			h--;
 		if (l <= h)
 		{
 			if (l != h)
@@ -30,7 +30,7 @@ size_t part(int *array, ssize_t l, ssize_t h, size_t size)
 				print_array(array, size);
 			}
 			l++;
-			h++;
+			h--;
 		}
 	}
 	return (h);
