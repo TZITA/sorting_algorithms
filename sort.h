@@ -42,6 +42,10 @@ void quicksort(int *array, ssize_t l, ssize_t h, size_t size);
 size_t part(int *array, ssize_t l, ssize_t h, size_t size);
 size_t c_sort(int *array, size_t size, size_t digit);
 size_t p10(size_t power);
+void b_cmp(char up, int *array, size_t size);
+void b_merge(char up, int *array, size_t size);
+void bit_s(char up, int *array, size_t size, size_t ttl);
+
 
 /*Advanced tasks prototypes.*/
 void shell_sort(int *array, size_t size);
@@ -51,5 +55,6 @@ void merge_sort(int *array, size_t size);
 void heap_sort(int *array, size_t size);
 void radix_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
 
 #endif /*End of the sort header.*/
