@@ -24,7 +24,7 @@ void swap(int *a, int *b)
  *
  * Return: i.
  */
-int part(int *array, size_t size, int l, int h)
+int part_q(int *array, size_t size, int l, int h)
 {
 	int *pivot;
 	int i;
@@ -65,7 +65,7 @@ void quick_recur(int *array, size_t size, int l, int h)
 
 	if (h - l > 0)
 	{
-		part_t = part(array, size, l, h);
+		part_t = part_q(array, size, l, h);
 		quick_recur(array, size, l, part_t - 1);
 		quick_recur(array, size, part_t + 1, h);
 	}

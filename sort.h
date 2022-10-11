@@ -31,7 +31,7 @@ void quick_sort(int *array, size_t size);
 
 /*Quick sort helper functions.*/
 void swap(int *a, int *b);
-int part(int *array, size_t size, int l, int h);
+int part_q(int *array, size_t size, int l, int h);
 void quick_recur(int *array, size_t size, int l, int h);
 
 /*Other helper functions*/
