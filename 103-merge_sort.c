@@ -70,15 +70,15 @@ void Split_M(size_t str, size_t end, int *array, int *cp)
 void merge_sort(int *array, size_t size)
 {
 	size_t i;
-	int *j;
+	int *cp;
 
 	if (array == NULL || size < 2)
 		return;
-	j = malloc(sizeof(int) * size);
-	if (j == NULL)
+	cp = malloc(sizeof(int) * size);
+	if (cp == NULL)
 		return;
 	for (i = 0; i < size; i++)
-		j[i] = array[i];
-	Split_M(0, size, array, j);
-	free(j);
+		cp[i] = array[i];
+	Split_M(0, size, array, cp);
+	free(cp);
 }
